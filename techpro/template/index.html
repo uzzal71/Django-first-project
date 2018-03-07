@@ -131,25 +131,9 @@
     <section class="p-0" id="portfolio">
       <div class="container-fluid p-0">
         <div class="row no-gutters popup-gallery">
-          {% for photo in photos %}
-          <div class="col-lg-4 col-sm-6">
-            {% if photo.image %}
-            <a class="portfolio-box" href="{{ photo.image.url}}">
-              <img class="img-fluid" src="{{ photo.image.url}}" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    {{ photo.category_name}}
-                  </div>
-                  <div class="project-name">
-                    {{ photo.project_name }}
-                  </div>
-                </div>
-              </div>
-            </a>
-            {% endif %}
-          </div>
-          {% endfor %}
+          {% block portifolio %}
+            <!-- show portifolio project -->
+          {% endblock %}
         </div>
       </div>
     </section>

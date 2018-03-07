@@ -7,4 +7,4 @@ def home(request):
 	content = {
 		'photos':queryset
 	}
-	return render(request, 'index.html', content)
+	return render(request, 'portifolio.html', content)
