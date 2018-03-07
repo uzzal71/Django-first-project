@@ -1,5 +1,10 @@
 from django.shortcuts import render, HttpResponse
+from .models import Photo
 
 # Create your views here.
 def home(request):
-	return render(request, 'index.html')
+	queryset = Photo.objects.all()
+	content = {
+		'photos':queryset
+	}
+	return render(request, 'index.html', content)
