@@ -26,3 +26,15 @@ class Logo(models.Model):
 
 		class Meta:
 			ordering = ['-create_time']
+
+class Header(models.Model):
+	title = models.CharField(max_length=200)
+	body = models.TextField(blank=True, null=True)
+	create_time = models.DateTimeField(auto_now_add=True, auto_now=False)
+	update_time = models.DateTimeField(auto_now_add=True, auto_now=False)
+
+	def __str__(self):
+		return self.title
+
+		class Meta:
+			ordering = ['-create_time']
